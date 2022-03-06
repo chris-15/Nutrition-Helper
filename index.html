@@ -5,41 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+        integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Dog Search Helper</title>
 </head>
 
 <body>
-    <header>
-        <div>
-            <h1>Hypo-Allergenic Dog Helper</h1>
-            <p>
-                seitan heirloom post-ironic pop-up iPhone mlkshk hella selfies
-                fashion axe occupy readymade put a bird on it messenger bag Wes
-                Anderson Schlitz plaid Bushwick church-key lo-fi skateboard slow-carb
-                hashtag trust fund Williamsburg biodiesel fixie farm-to-table 8-bit
-                banjo XOXO Banksy chillwave bicycle rights retro cliche tattooed bespoke
-                irony mumblecore Shoreditch deep v polaroid McSweeney's bitters cray gentrify
-                tofu Marfa you probably haven't heard of them yr banh mi asymmetrical art party selvage letterpress High
-                Life.
-            </p>
+    <header class="flex justify-between bg-green-500">
+        <div class="w-5/12 self-end">
+            <div>
+                <h1>Hypo-Allergenic Dog Helper</h1>
+                <p>
+                    seitan heirloom post-ironic pop-up iPhone mlkshk hella selfies
+                    fashion axe occupy readymade put a bird on it messenger bag Wes
+                    Anderson Schlitz plaid Bushwick church-key lo-fi skateboard slow-carb
+        
+                </p>
+            </div>
+
         </div>
-        <div>
-            <section class="hero">
-                <div class="hero-form">
-                    <h3>Choose Your Location</h3>
-                    <div>
-                        <form>
-                            <label for="name">Zip-Code:</label>
-                            <input type="text" placeholder="Zip-Code" name="name" id="name" class="form-input" />
-                            <button type="submit">
-                                Search
-                            </button>
-                        </form>
-                    </div>
-                    <div id="favorites">
-                        <h2>Favorties</h2>
-                    </div>
-            </section>
+        <div class="w-3/12 self-end">
+            <form>
+                <label for="name">Zip-Code:</label>
+                <input type="text" placeholder="Zip-Code" name="name" id="name" class="form-input" />
+                <button type="submit">
+                    Search
+                </button>
+            </form>
+        </div>
+        <div class="w-4/12" id="favorites">
+            <h2>Favorites</h2>
         </div>
     </header>
     <main>
@@ -47,16 +43,15 @@
             <h2>Dog Search Results</h2>
         </div>
         <div>
-            <h2>Find Stores Near You for Supplies Here</h2> 
+            <h2>Find Stores Near You for Supplies Here</h2>
         </div>
     </main>
     <footer>
         <h2>Made By Group 4</h2>
         <div>
-          &copy; Dog Search Helper
+            &copy; Dog Search Helper
         </div>
-      </footer>
-    <script src="https://cdn.tailwindcss.com/%22%3E"></script>
+    </footer>
 </body>
 
 </html>
