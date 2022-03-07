@@ -8,48 +8,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
         integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Dog Search Helper</title>
+    <title>Hypo-Allergenic Dog Search Helper</title>
 </head>
 
 <body>
-    <header class="flex justify-between bg-green-500">
+    <header class="flex justify-between py-8 px-4 bg-green-500">
         <div class="w-5/12 self-end">
             <div>
-                <h1>Hypo-Allergenic Dog Helper</h1>
-                <p>
-                    seitan heirloom post-ironic pop-up iPhone mlkshk hella selfies
-                    fashion axe occupy readymade put a bird on it messenger bag Wes
-                    Anderson Schlitz plaid Bushwick church-key lo-fi skateboard slow-carb
-        
+                <h1 class="font-extrabold text-4xl">Hypo-Allergenic Dog Search Helper</h1>
+                <p class="pt-4 font-medium">
+                    Here at Hypo-Allergenic Dog Search Helper we aim to find a dog for you and yours that won't send everyone away sneezing and sniffling. Simply input your zipcode to search for a Hypo-Allergenic dog in your area. We also thought it may be helpful for you to find local pet shops for all the supplies you may need when you're ready to adopt that four-legged family member! Best of luck in your search!
+
                 </p>
             </div>
 
         </div>
-        <div class="w-3/12 self-end">
+        <div class="w-3/12 self-center px-4 font-medium">
             <form>
                 <label for="name">Zip-Code:</label>
                 <input type="text" placeholder="Zip-Code" name="name" id="name" class="form-input" />
-                <button type="submit">
+                <button type="submit" class= "p-2 text-white bg-green-700 rounded-full">
                     Search
                 </button>
             </form>
         </div>
-        <div class="w-4/12" id="favorites">
-            <h2>Favorites</h2>
+        <div class="w-4/12 px-4" id="favorites">
+            <h2 class="font-bold text-3xl">Favorites</h2>
         </div>
     </header>
-    <main>
+
+    <section class="flex justify-between py-8 px-4 bg-green-600" id="results-container">
         <div>
-            <h2>Dog Search Results</h2>
+            <h2 class="font-bold text-3xl">Dog Search Results</h2>
         </div>
+    </section>
+    <section class="flex justify-between py-8 px-4 bg-green-700" id="supplies-container">
         <div>
-            <h2>Find Stores Near You for Supplies Here</h2>
+            <h2 class="font-bold text-3xl">Find Nearyby Stores For All Your Supplies</h2>
         </div>
-    </main>
-    <footer>
-        <h2>Made By Group 4</h2>
-        <div>
-            &copy; Dog Search Helper
+    </section>
+    <footer class="flex justify-center p-8 bg-green-800 text-white font-medium">
+        <h2 class="px-4">Made By Group 4</h2>
+        <div class="px-4">
+            &copy; Hypo-Allergenic Dog Search Helper
         </div>
     </footer>
 </body>
