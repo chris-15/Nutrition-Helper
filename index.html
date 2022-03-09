@@ -8,38 +8,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
         integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Hypo-Allergenic Dog Search Helper</title>
+    <title>Nutrition Helper</title>
 </head>
 
 <body>
     <header class="flex justify-between py-8 px-4 bg-green-500">
         <div class="w-5/12 self-end">
             <div>
-                <h1 class="font-extrabold text-4xl">Hypo-Allergenic Dog Search Helper</h1>
+                <h1 class="font-extrabold text-4xl">Nutrition Helper</h1>
                 <p class="pt-4 font-medium">
-                    Here at Hypo-Allergenic Dog Search Helper we aim to find a dog for you and yours that won't send everyone away sneezing and sniffling. Simply input your zipcode to search for a Hypo-Allergenic dog in your area. We also thought it may be helpful for you to find local pet shops for all the supplies you may need when you're ready to adopt that four-legged family member! Best of luck in your search!
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat voluptatibus sint rerum eaque officia nostrum dolore quos, ipsa, illo vero excepturi beatae quas asperiores doloribus facilis possimus? Sed, velit quod.
 
                 </p>
             </div>
 
         </div>
-        <div class="w-3/12 self-center px-4 font-medium">
-            <form>
-                <label for="name">Zip-Code:</label>
-                <input type="text" placeholder="Zip-Code" name="name" id="name" class="form-input" />
+        <div class="w-3/12 self-center px-4 font-medium" id="search-form">
+            <form id="search-form">
+                <label for="search">Food:</label>
+                <input type="text" placeholder="Enter Food" name="search" id="search" class="form-input" />
                 <button type="submit" class= "p-2 text-white bg-green-700 rounded-full">
                     Search
                 </button>
             </form>
         </div>
-        <div class="w-4/12 px-4" id="favorites">
-            <h2 class="font-bold text-3xl">Favorites</h2>
+        <div class="w-4/12 px-4" id="history">
+            <h2 class="font-bold text-3xl">History</h2>
         </div>
     </header>
 
     <section class="flex justify-between py-8 px-4 bg-green-600" id="results-container">
         <div>
-            <h2 class="font-bold text-3xl">Dog Search Results</h2>
+            <h2 class="font-bold text-3xl">Food Search Results</h2>
+
+            <!--container for cards for food search results-->
+            <div id="food-card-container" class="flex justify-between">
+                
+
+            </div>
         </div>
     </section>
     <section class="flex justify-between py-8 px-4 bg-green-700" id="supplies-container">
@@ -47,12 +53,30 @@
             <h2 class="font-bold text-3xl">Find Nearyby Stores For All Your Supplies</h2>
         </div>
     </section>
+
     <footer class="flex justify-center p-8 bg-green-800 text-white font-medium">
         <h2 class="px-4">Made By Group 4</h2>
         <div class="px-4">
-            &copy; Hypo-Allergenic Dog Search Helper
+            &copy; Nutrition Helper
         </div>
     </footer>
+
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
+
+
+<!-- not actual code for html file just a note for me: html for card to recreate in js-->
+<!-- 
+<div class="flex justify-center">
+    <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+      <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Card title</h5>
+      <ul class= "text-gray-900">
+        <li class= "px-6">Calories : 100</li>
+        <li class= "px-6">Fat: 10 g</li>
+        <li class= "px-6">protein: 10 g</li>
+        <li class= "px-6">carbs: 10 g</li>
+      </ul>
+    </div>
+</div> -->
