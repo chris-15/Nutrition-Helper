@@ -13,44 +13,50 @@
 
 <body>
     <header class="flex justify-between py-8 px-4 bg-green-500">
-        <div class="w-5/12 self-end">
+        <div class="w-7/12 self-end">
             <div>
                 <h1 class="font-extrabold text-4xl">Nutrition Helper</h1>
                 <p class="pt-4 font-medium">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat voluptatibus sint rerum eaque officia nostrum dolore quos, ipsa, illo vero excepturi beatae quas asperiores doloribus facilis possimus? Sed, velit quod.
-
+                    We're here to help you find nutritious foods at your local grocery stores. Just type in the foods you're interested in learning about and we'll give you the nutrition content. Then just type in your zip code to see a list of your local grocery stores where you can purchase each product. It's that simple. Making your food shopping experience quicker and easier, which means less time shopping and more time for eating.
                 </p>
             </div>
 
         </div>
-        <div class="w-3/12 self-center px-4 font-medium" id="search-form">
-            <form id="search-form">
-                <label for="search">Food:</label>
-                <input type="text" placeholder="Enter Food" name="search" id="search" class="form-input" />
-                <button type="submit" class= "p-2 text-white bg-green-700 rounded-full">
-                    Search
-                </button>
-            </form>
-        </div>
-        <div class="w-4/12 px-4" id="history">
+        
+        <div class="w-5/12 px-4" id="history">
             <h2 class="font-bold text-3xl">History</h2>
         </div>
     </header>
 
-    <section class="flex justify-between py-8 px-4 bg-green-600" id="results-container">
+    <section class="py-8 px-4 bg-green-600" id="results-container">
         <div>
-            <h2 class="font-bold text-3xl">Food Search Results</h2>
-
+            <div class="pb-6 flex justify-items-center">
+                <h2 class="font-bold text-3xl">Food Search Results:</h2>
+                <div class="w-3/12 self-center px-4 font-medium" id="search-form">
+                    <form id="search-form">
+                        <input type="text" placeholder="Enter Food" name="search" id="search" class="form-input" />
+                        <button type="submit" class= "p-2 text-white bg-green-700 rounded-full">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
             <!--container for cards for food search results-->
             <div id="food-card-container" class="flex justify-between">
-                
-
             </div>
         </div>
     </section>
-    <section class="flex justify-between py-8 px-4 bg-green-700" id="supplies-container">
-        <div>
-            <h2 class="font-bold text-3xl">Find Nearyby Stores For All Your Supplies</h2>
+    <section class="py-8 px-4 bg-green-700" id="supplies-container">
+        <div class="pb-6 flex justify-items-center">
+            <h2 class="font-bold text-3xl">Find Nearby Stores For All Your Supplies:</h2>
+            <div class="w-3/12 self-center px-4 font-medium" id="search-zip-form">
+                <form id="search-zip-form">
+                    <input type="text" placeholder="Enter Zipcode" name="search-zip" id="search-zip" class="form-input" />
+                    <button type="submit" class= "p-2 text-white bg-green-800 rounded-full">
+                        Search
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
