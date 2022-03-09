@@ -5,7 +5,7 @@ var searchFormEl =  document.querySelector("#search-form");
 var foodCardContainerEl = document.querySelector("#food-card-container");
 var zipSearchFormEl = document.querySelector("#search-zip-form");
 var inputZipSearchEl = document.querySelector("#search-zip");
-var storeCardContainerEl= document.querySelector("#store-card container");
+var storeCardContainerEl= document.querySelector("#store-card-container");
 var historyButtonContainerEl = document.querySelector("#history-button-container")
 
 
@@ -128,6 +128,47 @@ var findStores = function (zipCode) {
                     return response.json();
                 }).then(function(data) {
                     console.log(data)
+                    
+                    storeCardContainerEl.innerHTML = "";
+
+                    for (i=0; i <5; i++) {
+                    //create elements
+                    var storeCardDivEl = document.createElement("div");
+                    storeCardDivEl.className= "flex justify-center";
+                    storeCardContainerEl.appendChild(storeCardDivEl);
+
+                    // div for store card content
+                    var storeCardContentDivEl= document.createElement("div");
+                    storeCardContentDivEl.className= "block p-6 rounded-lg shadow-lg bg-white max-w-sm";
+                    storeCardDivEl.appendChild(storeCardContentDivEl);
+
+                    //store card name
+                    var storeNameEl = document.createElement("h5");
+                    storeNameEl.className= "text-gray-900 text-xl leading-tight font-medium mb-2";
+                    var storeName = data.resourceSets[0].resources[i].name;
+                    storeNameEl.innerHTML= storeName;
+                    storeCardContentDivEl.appendChild(storeNameEl);
+
+                    // unordered list 
+                    var storeCardListEl = document.createElement("ul");
+                    storeCardListEl.className= "text-gray-900";
+                    storeCardContentDivEl.appendChild(storeCardListEl);
+
+                    //list item address
+                    var addressListItemEl = document.createElement("li");
+                    addressListItemEl.className= "px-6";
+                    var address = data.resourceSets[0].resources[i].Address.formattedAddress;
+                    addressListItemEl.textContent= address;
+                    storeCardContentDivEl.appendChild(addressListItemEl);
+
+                    //list item phone #
+                    var phoneListItemEl = document.createElement("li");
+                    phoneListItemEl.className= "px-6";
+                    var phoneNumber = data.resourceSets[0].resources[i].PhoneNumber;
+                    phoneListItemEl.textContent= phoneNumber
+                    storeCardContentDivEl.appendChild(phoneListItemEl);
+                    }
+
                 })
 
             })
