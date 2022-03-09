@@ -89,11 +89,13 @@ var findFood = function (foodName) {
 
 // function that creates new buttons for each search history when a new search is conducted
 var newHistoryButton = function() {
-    var newHistoryButtonEl =  document.createElement("button");
+    historyButtonContainerEl.innerHTML= "";
+    loadHistory();
+    /* var newHistoryButtonEl =  document.createElement("button");
     newHistoryButtonEl.setAttribute("type", "click");
     newHistoryButtonEl.textContent= inputSearchEl.value.trim();
     // add classes here for styling
-    historyButtonContainerEl.appendChild(newHistoryButtonEl);
+    historyButtonContainerEl.appendChild(newHistoryButtonEl); */
 }
 
 // function to load the local storage so history stays on page if page is left or refreshed
@@ -186,6 +188,11 @@ var foodFormHandler = function(event) {
 
     // pushes value to array only if it has a value, no blanks
     if (foodSearch) {
+        // keeps history at length 5 and removes item and replaces with new
+        if (historyFoodList.length >= 5) {
+            historyFoodList.shift();
+        }
+
         historyFoodList.push(foodSearch)
     };
 
