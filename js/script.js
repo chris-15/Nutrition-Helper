@@ -17,6 +17,7 @@ var findBooks = function (foodName) {
             response.json().then(function (data) {
                 console.log(data);
 
+                //clears search results for next search
                 foodCardContainerEl.innerHTML = "";
 
                 // for loop for 5 food cards
