@@ -56,28 +56,28 @@ var findFood = function (foodName) {
                     var calListItemEl = document.createElement("li");
                     calListItemEl.className= "px-6";
                     var calories = data.hints[i].food.nutrients.ENERC_KCAL;
-                    calListItemEl.innerHTML= "Calories: " + calories + "g";
+                    calListItemEl.innerHTML= "Calories: " + Math.round(calories) + "g";
                     cardListEl.appendChild(calListItemEl);
 
                     //list item fat
                     var fatListItemEl = document.createElement("li");
                     fatListItemEl.className= "px-6";
                     var fat = data.hints[i].food.nutrients.FAT;
-                    fatListItemEl.innerHTML= "Fat: " + fat + "g";
+                    fatListItemEl.innerHTML= "Fat: " + Math.round(fat) + "g";
                     cardListEl.appendChild(fatListItemEl);
 
                     //list item protein
                     var proteinListItemEl = document.createElement("li");
                     proteinListItemEl.className= "px-6";
                     var protein = data.hints[i].food.nutrients.PROCNT;
-                    proteinListItemEl.innerHTML= "Protein: " + fat + "g";
+                    proteinListItemEl.innerHTML= "Protein: " + Math.round(protein) + "g";
                     cardListEl.appendChild(proteinListItemEl);
 
                     //list item carbs
                     var carbListItemEl = document.createElement("li");
                     carbListItemEl.className= "px-6";
                     var carb = data.hints[i].food.nutrients.CHOCDF;
-                    carbListItemEl.innerHTML= "Carbohydrates: " + carb + "g";
+                    carbListItemEl.innerHTML= "Carbohydrates: " + Math.round(carb) + "g";
                     cardListEl.appendChild(carbListItemEl);
 
                 }
@@ -187,11 +187,12 @@ var foodFormHandler = function(event) {
     var foodSearch = inputSearchEl.value.trim();
 
     // pushes value to array only if it has a value, no blanks
-    if (foodSearch) {
+    if (foodSearch && !historyFoodList.includes(foodSearch) ) {
         // keeps history at length 5 and removes item and replaces with new
         if (historyFoodList.length >= 5) {
             historyFoodList.shift();
         }
+
 
         historyFoodList.push(foodSearch)
     };
@@ -214,11 +215,12 @@ var storeSearchHandler = function(event) {
     event.preventDefault();
     var zipSearch = inputZipSearchEl.value.trim();
 
-    if (zipSearch) {
+    if (!isNaN(zipSearch) ) {
         findStores(zipSearch);
         inputZipSearchEl.value = "";
     } else {
-        console.log("enter a valid zip")
+        console.log("enter a valid zip");
+        inputZipSearchEl.value = ""
         // use a modal here for error 
     }
 };
