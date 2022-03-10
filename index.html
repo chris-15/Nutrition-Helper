@@ -13,9 +13,9 @@
 
 <body>
     <header class="flex justify-between py-8 px-4 bg-green-500">
-        <div class="w-7/12 self-end">
+        <div class="w-7/12">
             <div>
-                <h1 class="font-extrabold text-4xl">Nutrition Helper</h1>
+                <h1 class="font-extrabold text-5xl">Nutrition Helper</h1>
                 <p class="pt-4 font-medium">
                     We're here to help you find nutritious foods at your local grocery
                     stores. Just type in the foods you're interested in learning about
@@ -30,22 +30,22 @@
 
         <!--search history-->
         <div class="w-5/12 px-4" id="history">
-            <h2 class="font-bold text-3xl">History</h2>
-            <div id="history-button-container" class="grid grid-cols-1">
+            <h2 class="font-bold text-3xl text-center">History</h2>
+            <div id="history-button-container" class="grid grid-cols-1 pt-4">
 
             </div>
         </div>
     </header>
 
     <main>
-        <section class="py-8 px-4 bg-green-600" id="results-container">
+        <section class="py-8 px-4 bg-green-600 border-b-4 border-black" id="results-container">
             <!--search food form container-->
             <div class="pb-6 flex justify-items-center">
                 <h2 class="font-bold text-3xl">Food Search Results:</h2>
                 <div class="w-3/12 self-center px-4 font-medium">
                     <form id="search-form">
                         <input type="text" placeholder="Enter Food" name="search" id="search" class="form-input" />
-                        <button type="submit" class="p-2 text-white bg-green-700 rounded-full">
+                        <button type="submit" class="py-2 px-4 text-white font-semibold bg-green-700 rounded-full">
                             Search
                         </button>
                     </form>
@@ -58,7 +58,7 @@
             </div>
         </section>
 
-        <section class="py-8 px-4 bg-green-700" id="supplies-container">
+        <section class="py-8 px-4 bg-green-600" id="supplies-container">
             <!-- search store form cotainer -->
             <div class="pb-6 flex justify-items-center">
                 <h2 class="font-bold text-3xl">
@@ -68,7 +68,7 @@
                     <form id="search-zip-form">
                         <input type="text" placeholder="Enter Zipcode" name="search-zip" id="search-zip"
                             class="form-input" />
-                        <button type="submit" id="zip-search-button" class="p-2 text-white bg-green-800 rounded-full">
+                        <button type="submit" id="zip-search-button" class="py-2 px-4 text-white font-semibold bg-green-700 rounded-full">
                             Search
                         </button>
                     </form>
@@ -82,7 +82,7 @@
         </section>
     </main>
 
-    <footer class="flex justify-center p-8 bg-green-800 text-white font-medium">
+    <footer class="flex sticky bottom-0 justify-center p-8 bg-green-800 text-white font-medium">
         <h2 class="px-4">Made By Group 4</h2>
         <div class="px-4">&copy; Nutrition Helper</div>
     </footer>
