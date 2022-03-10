@@ -104,6 +104,7 @@ var loadHistory = function() {
         var historyFoodItemEl = document.createElement("button");
         historyFoodItemEl.setAttribute("type", "click");
         // add classes here for styling
+        historyFoodItemEl.className="p-2 my-1 w-3/4 place-self-center text-white bg-green-700 rounded-full"
         historyFoodItemEl.textContent= (historyFoodList[i]);
         historyButtonContainerEl.appendChild(historyFoodItemEl);
     }
@@ -153,7 +154,7 @@ var findStores = function (zipCode) {
 
                     // unordered list 
                     var storeCardListEl = document.createElement("ul");
-                    storeCardListEl.className= "text-gray-900";
+                    storeCardListEl.className= "text-gray-900 list-none";
                     storeCardContentDivEl.appendChild(storeCardListEl);
 
                     //list item address
