@@ -154,7 +154,7 @@ var findStores = function (zipCode) {
 
                     // unordered list 
                     var storeCardListEl = document.createElement("ul");
-                    storeCardListEl.className= "text-gray-900 list-none";
+                    storeCardListEl.className= "text-gray-900";
                     storeCardContentDivEl.appendChild(storeCardListEl);
 
                     //list item address
@@ -162,14 +162,14 @@ var findStores = function (zipCode) {
                     addressListItemEl.className= "px-6";
                     var address = data.resourceSets[0].resources[i].Address.formattedAddress;
                     addressListItemEl.textContent= address;
-                    storeCardContentDivEl.appendChild(addressListItemEl);
+                    storeCardListEl.appendChild(addressListItemEl);
 
                     //list item phone #
                     var phoneListItemEl = document.createElement("li");
                     phoneListItemEl.className= "px-6";
                     var phoneNumber = data.resourceSets[0].resources[i].PhoneNumber;
                     phoneListItemEl.textContent= phoneNumber
-                    storeCardContentDivEl.appendChild(phoneListItemEl);
+                    storeCardListEl.appendChild(phoneListItemEl);
                     }
 
                 })
