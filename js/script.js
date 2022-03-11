@@ -142,7 +142,7 @@ var findStores = function (zipCode) {
 
                     // div for store card content
                     var storeCardContentDivEl= document.createElement("div");
-                    storeCardContentDivEl.className= "block p-6 rounded-lg shadow-lg bg-white max-w-sm";
+                    storeCardContentDivEl.className= "block p-2 rounded-lg shadow-lg bg-white max-w-sm";
                     storeCardDivEl.appendChild(storeCardContentDivEl);
 
                     //store card name
@@ -159,14 +159,14 @@ var findStores = function (zipCode) {
 
                     //list item address
                     var addressListItemEl = document.createElement("li");
-                    addressListItemEl.className= "px-6";
+                    addressListItemEl.className= "px-2";
                     var address = data.resourceSets[0].resources[i].Address.formattedAddress;
                     addressListItemEl.textContent= address;
                     storeCardListEl.appendChild(addressListItemEl);
 
                     //list item phone #
                     var phoneListItemEl = document.createElement("li");
-                    phoneListItemEl.className= "px-6";
+                    phoneListItemEl.className= "px-2";
                     var phoneNumber = data.resourceSets[0].resources[i].PhoneNumber;
                     phoneListItemEl.textContent= phoneNumber
                     storeCardListEl.appendChild(phoneListItemEl);
