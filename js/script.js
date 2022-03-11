@@ -115,7 +115,7 @@ var loadHistory = function() {
 var findStores = function (zipCode) {
     // bingApiUrlOne = "http://dev.virtualearth.net/REST/v1/Locations/US/zipCode/?&key=Ai5n4MIAAGi2oZlEeqeqwzpcluN00BmjulByA70pa5NlqQQUNlQdpBOSZ_lfbiyO"
 
-    var bingApiUrlOne = "http://dev.virtualearth.net/REST/v1/Locations/US/CT/" +zipCode + "/?&key=Ai5n4MIAAGi2oZlEeqeqwzpcluN00BmjulByA70pa5NlqQQUNlQdpBOSZ_lfbiyO";
+    var bingApiUrlOne = "https://dev.virtualearth.net/REST/v1/Locations/US/CT/" +zipCode + "/?&key=Ai5n4MIAAGi2oZlEeqeqwzpcluN00BmjulByA70pa5NlqQQUNlQdpBOSZ_lfbiyO";
 
     fetch(bingApiUrlOne).then(function (response) {
         if (response.ok) {
