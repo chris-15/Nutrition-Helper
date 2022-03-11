@@ -1,0 +1,11 @@
+.content {
+    flex-direction: column;
+    display: flex;
+    min-height: 100vh;
+    background-color: #083F30;
+}
+
+main {
+    flex: 1;
+}
+
