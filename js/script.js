@@ -37,7 +37,8 @@ var findFood = function (foodName) {
 
                     // div for card content
                     var cardContentDivEl= document.createElement("div");
-                    cardContentDivEl.className= "block p-6 rounded-lg shadow-lg bg-white max-w-sm";
+                    cardContentDivEl.className= "md:mt-4 sm:mt-4 block p-6 rounded-lg shadow-lg bg-white max-w-sm";
+                    cardContentDivEl.setAttribute("id", "card-content-div");
                     cardDivEl.appendChild(cardContentDivEl);
 
                     //card title
@@ -142,8 +143,10 @@ var findStores = function (zipCode) {
 
                     // div for store card content
                     var storeCardContentDivEl= document.createElement("div");
-                    storeCardContentDivEl.className= "block p-2 rounded-lg shadow-lg bg-white max-w-sm";
+                    storeCardContentDivEl.className= "md:mt-4 sm:mt-4 block p-2 rounded-lg shadow-lg bg-white max-w-sm";
+                    storeCardContentDivEl.setAttribute("id", "store-content-div");
                     storeCardDivEl.appendChild(storeCardContentDivEl);
+
 
                     //store card name
                     var storeNameEl = document.createElement("h5");

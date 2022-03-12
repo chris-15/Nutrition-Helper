@@ -6,5 +6,15 @@
 }
 
 main {
-    flex: 1;
+    flex: 1; 
 }
+
+@media screen and (max-width: 639px) {
+    #card-content-div, #store-content-div {
+        margin-top: 1rem;
+    }
+    #description, #history {
+        width: 100%;
+    }
+}
+
