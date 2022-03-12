@@ -157,12 +157,22 @@ var findStores = function (zipCode) {
                     storeCardListEl.className= "text-gray-900";
                     storeCardContentDivEl.appendChild(storeCardListEl);
 
-                    //list item address
-                    var addressListItemEl = document.createElement("li");
-                    addressListItemEl.className= "px-2";
-                    var address = data.resourceSets[0].resources[i].Address.formattedAddress;
-                    addressListItemEl.textContent= address;
-                    storeCardListEl.appendChild(addressListItemEl);
+                     //list item address st/road
+                     var addressRdListItemEl = document.createElement("li");
+                     addressRdListItemEl.className= "px-2";
+                     var addressRd = data.resourceSets[0].resources[i].Address.addressLine;
+                     addressRdListItemEl.textContent= addressRd;
+                     storeCardListEl.appendChild(addressRdListItemEl);
+ 
+                     // list item address town/city state and zip code
+                     var addressTownListItemEl = document.createElement("li");
+                     addressTownListItemEl.className= "px-2";
+                     var addressTown = data.resourceSets[0].resources[i].Address.locality;
+                     var addressState = data.resourceSets[0].resources[i].Address.adminDistrict;
+                     var addressZip = data.resourceSets[0].resources[i].Address.postalCode;
+                     addressTownListItemEl.textContent= addressTown +", " + addressState + ", " + addressZip;
+                     storeCardListEl.appendChild(addressTownListItemEl);
+ 
 
                     //list item phone #
                     var phoneListItemEl = document.createElement("li");
