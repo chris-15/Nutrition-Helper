@@ -1,16 +1,12 @@
-# Weather Dashboard- Weekly Challenge 6 
+# Nutrition Helper - Group Project 1 
 
 ## Description 
 
-Description here
-
-Below are the challenge requirements:
-
-![challenge requirments](link to screenshot)
+Nutrition Helper is an application that allows the user find foods, various information, and various locations to purchase products based on zip-code submition. 
 
 Below is a preview of the deployed application:
 
-![deployed application](link to screenshot)
+ADD SCREEN SHOT HERE PLEASE OF DEPLOYED VERSION
 
 
 ## Installation
@@ -20,24 +16,24 @@ There is no installation needed to use the application.
 
 ## Usage 
 
-Deployed Application found here: [Nutrition Helper](link here)
+Deployed Application found here: [Nutrition Helper] https://chris-15.github.io/Project1/
 
 
 ## Credits
 
-- AskBCS
-- Various Classmates
-- TA's
-- [Bootstrap Documentation](link here)
-- [Moment.js Documentation](link here)
-- [Open Weather API Documentation](link here)
+- Group 4
+- Christopher Sarmiento-Salas, Diana Sossei, Kenneth Hollis, Tim Knight
+- TA's: Dominick, Jaime and Symone
+- [Tailwind Documentation](https://tailwind-elements.com/)
+- [Open Edamam Food Database API Documentation](https://developer.edamam.com/food-database-api-docs#/)
+- [Open Bing Maps Locations API](https://docs.microsoft.com/en-us/bingmaps/rest-services/locations/)
 
 
 ## License
 
 MIT License
 
-Copyright (c) [2022] [Christopher Sarmiento-Salas]
+Copyright (c) [2022] [Group 4]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
