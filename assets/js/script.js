@@ -6,7 +6,8 @@ var foodCardContainerEl = document.querySelector("#food-card-container");
 var zipSearchFormEl = document.querySelector("#search-zip-form");
 var inputZipSearchEl = document.querySelector("#search-zip");
 var storeCardContainerEl= document.querySelector("#store-card-container");
-var historyButtonContainerEl = document.querySelector("#history-button-container")
+var historyButtonContainerEl = document.querySelector("#history-button-container");
+var modalEl= document.querySelector("#modal");
 
 
 // array for searches stored in local storage
@@ -15,7 +16,6 @@ var historyFoodList= localStorage.getItem("userSearchTerm")?JSON.parse(localStor
 // function to fetch search request for books with a subject search
 var findFood = function (foodName) {
 
-    //https://api.edamam.com/api/food-database/v2/parser?app_id=d7658b96&app_key=28c3ad5a64730b44c357576febfb2dd9&ingr=fries&nutrition-type=cooking
 
     var foodApi = "https://api.edamam.com/api/food-database/v2/parser?app_id=d7658b96&app_key=28c3ad5a64730b44c357576febfb2dd9&ingr="+foodName+"&nutrition-type=cooking";
 
@@ -57,7 +57,7 @@ var findFood = function (foodName) {
                     var calListItemEl = document.createElement("li");
                     calListItemEl.className= "px-6";
                     var calories = data.hints[i].food.nutrients.ENERC_KCAL;
-                    calListItemEl.innerHTML= "Calories: " + Math.round(calories) + "g";
+                    calListItemEl.innerHTML= "Calories: " + Math.round(calories);
                     cardListEl.appendChild(calListItemEl);
 
                     //list item fat
@@ -92,11 +92,6 @@ var findFood = function (foodName) {
 var newHistoryButton = function() {
     historyButtonContainerEl.innerHTML= "";
     loadHistory();
-    /* var newHistoryButtonEl =  document.createElement("button");
-    newHistoryButtonEl.setAttribute("type", "click");
-    newHistoryButtonEl.textContent= inputSearchEl.value.trim();
-    // add classes here for styling
-    historyButtonContainerEl.appendChild(newHistoryButtonEl); */
 }
 
 // function to load the local storage so history stays on page if page is left or refreshed
@@ -114,7 +109,6 @@ var loadHistory = function() {
 
 // fucntion to fetch store search request for stores near location zip
 var findStores = function (zipCode) {
-    // bingApiUrlOne = "http://dev.virtualearth.net/REST/v1/Locations/US/zipCode/?&key=Ai5n4MIAAGi2oZlEeqeqwzpcluN00BmjulByA70pa5NlqQQUNlQdpBOSZ_lfbiyO"
 
     var bingApiUrlOne = "https://dev.virtualearth.net/REST/v1/Locations/US/CT/" +zipCode + "/?&key=Ai5n4MIAAGi2oZlEeqeqwzpcluN00BmjulByA70pa5NlqQQUNlQdpBOSZ_lfbiyO";
 
@@ -221,6 +215,7 @@ var foodFormHandler = function(event) {
     } else {
         console.log("enter a valid food")
         // use a modal here for error
+        modalEl.style.display="block";
     }
 };
 
@@ -229,13 +224,14 @@ var storeSearchHandler = function(event) {
     event.preventDefault();
     var zipSearch = inputZipSearchEl.value.trim();
 
-    if (!isNaN(zipSearch) ) {
+    if ( zipSearch && !isNaN(zipSearch) ) {
         findStores(zipSearch);
         inputZipSearchEl.value = "";
     } else {
         console.log("enter a valid zip");
         inputZipSearchEl.value = ""
         // use a modal here for error 
+        modalEl.style.display="block";
     }
 };
 
@@ -246,10 +242,17 @@ var historyButtonHandler = function(event) {
     findFood(foodBtn);
 }
 
+var modalCloseHandler = function (event) {
+    modalEl.style.display = "none";
+
+}
+
 searchFormEl.addEventListener("submit", foodFormHandler);
 
 zipSearchFormEl.addEventListener("submit", storeSearchHandler);
 
 historyButtonContainerEl.addEventListener("click", historyButtonHandler);
+
+modalEl.addEventListener("click", modalCloseHandler);
 
 loadHistory();
