@@ -1,0 +1,20 @@
+.content {
+    flex-direction: column;
+    display: flex;
+    min-height: 100vh;
+    background-color: #083F30;
+}
+
+main {
+    flex: 1; 
+}
+
+@media screen and (max-width: 639px) {
+    #card-content-div, #store-content-div {
+        margin-top: 1rem;
+    }
+    #description, #history {
+        width: 100%;
+    }
+}
+
