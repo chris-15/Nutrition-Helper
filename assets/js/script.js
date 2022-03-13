@@ -242,6 +242,7 @@ var historyButtonHandler = function(event) {
     findFood(foodBtn);
 }
 
+// function to handle closing the modal
 var modalCloseHandler = function (event) {
     modalEl.style.display = "none";
 

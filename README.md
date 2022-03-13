@@ -25,6 +25,7 @@ Deployed Application found here: [Nutrition Helper] https://chris-15.github.io/P
 - Christopher Sarmiento-Salas, Diana Sossei, Kenneth Hollis, Tim Knight
 - TA's: Dominick, Jaime and Symone
 - [Tailwind Documentation](https://tailwind-elements.com/)
+- [Tailwind Elements Documentation](https://tailwind-elements.com/quick-start/)
 - [Open Edamam Food Database API Documentation](https://developer.edamam.com/food-database-api-docs#/)
 - [Open Bing Maps Locations API](https://docs.microsoft.com/en-us/bingmaps/rest-services/locations/)
 
