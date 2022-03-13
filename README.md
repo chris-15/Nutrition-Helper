@@ -2,12 +2,17 @@
 
 ## Description 
 
-Nutrition Helper is an application that allows the user find foods, various information, and various locations to purchase products based on zip-code submition. 
+Nutrition Helper is an application that allows the user to find foods, various information, and various locations to purchase products based on zip-code submission. We used tailwind for styling the page. We fetched the information for nutrition from the Edamam Food Database API. We fetched the store information from the Bing Maps Locations API. 
 
 Below is a preview of the deployed application:
 
-ADD SCREEN SHOT HERE PLEASE OF DEPLOYED VERSION
+At large screensizes:
 
+<img src="./assets/images/nutrition_helper-004.jpg" width="600" height="300">
+
+At mobile sizes:
+
+<img src="./assets/images/nutrition_helper_bp575_001.jpg" width="300" height="500">
 
 ## Installation
 
@@ -21,20 +26,20 @@ Deployed Application found here: [Nutrition Helper] https://chris-15.github.io/P
 
 ## Credits
 
-- Group 4
+- Group 3
 - Christopher Sarmiento-Salas, Diana Sossei, Kenneth Hollis, Tim Knight
 - TA's: Dominick, Jaime and Symone
 - [Tailwind Documentation](https://tailwind-elements.com/)
 - [Tailwind Elements Documentation](https://tailwind-elements.com/quick-start/)
-- [Open Edamam Food Database API Documentation](https://developer.edamam.com/food-database-api-docs#/)
-- [Open Bing Maps Locations API](https://docs.microsoft.com/en-us/bingmaps/rest-services/locations/)
+- [Edamam Food Database API Documentation](https://developer.edamam.com/food-database-api-docs#/)
+- [Bing Maps Locations API](https://docs.microsoft.com/en-us/bingmaps/rest-services/locations/)
 
 
 ## License
 
 MIT License
 
-Copyright (c) [2022] [Group 4]
+Copyright (c) [2022] [Group 3]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
