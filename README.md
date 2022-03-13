@@ -21,7 +21,7 @@ There is no installation needed to use the application.
 
 ## Usage 
 
-Deployed Application found here: [Nutrition Helper] https://chris-15.github.io/Project1/
+Deployed Application found here: [Nutrition Helper](https://chris-15.github.io/Nutrition-Helper-Project1/)
 
 
 ## Credits
